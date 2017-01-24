@@ -1,0 +1,31 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    normalize_vim                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lfabbro <lfabbro@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2015/12/06 13:49:49 by lfabbro           #+#    #+#              #
+/*   Updated: 2015/12/06 16:41:15 by lfabbro          ###   ########.fr       */
+#                                                                              #
+# **************************************************************************** #
+
+# remove all EOL spaces
+# add a space after every 'while'
+# add a space after every 'break'
+# set cursor on 3rd line
+# cut 2 lines
+# set cursor on 5th line
+# paste clipboard content
+# go to start of the file, indent, to the end of the file
+# add header
+
+:%s/ \+$//g<Enter>
+:%s/while(/while (/<Enter>
+:%s/break/break /<Enter>
+3G<Enter>
+2D<Enter>
+5G<Enter>
+p<Enter>
+gg=G<Enter>
+:Stdheader<Enter>

@@ -1,0 +1,33 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .vimrc                                             :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: clagreou <clagreou@student.42.fr>          +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2015/12/05 22:17:57 by clagreou          #+#    #+#              "
+/*   Updated: 2015/12/06 16:38:28 by lfabbro          ###   ########.fr       */
+"                                                                              "
+" **************************************************************************** "
+
+"automatic identation (with tabs) for C files
+set cindent
+
+"automatic ending for parenthesis and accolades
+inoremap	{	{}<Left>
+inoremap	(	()<Left>
+
+"display cursor vertical position
+set ruler
+
+"highlights double spaces
+highlight	DoubleSpace	ctermbg=yellow
+match		DoubleSpace	' \+ '
+
+"highlights EOL spaces
+let @/=' \n'
+
+"archive savefiles in a specifique folder
+set backup								" activate vim backup feature
+set backupdir=~/.vim					" specify backup file location
+set dir=~/.vim							" specify swap file location
